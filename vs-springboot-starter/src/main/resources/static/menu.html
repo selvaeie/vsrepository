@@ -1,0 +1,51 @@
+<!doctype html>
+<html ng-app="menuModule">
+
+<head>
+    <script src = "app/lib/1.2.1/angular.js"></script>
+    <script src="app/controllers/MenuController.js"></script>
+    <link rel="stylesheet" href="/app/css/menu.css">
+</head>
+
+<body>
+<div>
+
+    <div ng-controller="getAllMenu">
+ 
+    <p> Get all <a ng-click="loadmenu()">Menus</a> </p>
+   
+    
+        <table>
+                   
+            <thead>
+            <tr>
+                <td>ItemNumber</td>
+                <td>ItemName</td>
+                <td>ItemDate</td>
+                <td>remarks</td>
+                <td>price</td>
+            </tr>
+            </thead>
+       <!--   <tr>
+              <td>{{Menu.itemNo}}</td>
+              <td>{{Menu.itemName}}</td>
+              <td>{{Menu.itemDate}}</td>
+              <td>{{Menu.remarks}}</td>
+              <td>{{Menu.price}}</td>
+          </tr>  --> 
+            <tr ng-repeat="Menu in Menu">
+              <td>{{Menu.itemNo}}</td>
+              <td>{{Menu.itemName}}</td>
+              <td>{{Menu.itemDate}}</td>
+              <td>{{Menu.remarks}}</td>
+              <td>{{Menu.price}}</td>
+          </tr>
+          
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+</html>

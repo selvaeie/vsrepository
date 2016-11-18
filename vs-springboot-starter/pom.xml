@@ -1,0 +1,22 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.vs.main</groupId>
+    <artifactId>vs-main-deployment</artifactId>
+    <version>V.1.0.0.0</version>
+  </parent>
+  <artifactId>vs-springboot-starter</artifactId>
+  <name>vs-springboot-starter</name>
+  <description>Springboot starter</description>
+  
+  	<dependencies>
+  		<dependency>
+			<groupId>com.vs.main</groupId>
+			<artifactId>vs-menu-service</artifactId>
+			 <version>v1.0.0.0</version>
+		</dependency>
+ 
+  	
+  	</dependencies>
+  
+</project>
