@@ -1,0 +1,113 @@
+<!doctype html>
+<html ng-app="helloAjaxApp">
+
+<head>
+    <script src = "/app/lib/1.2.1/angular.js"></script>
+   <script src="/app/controllers/addmenucontroller.js"></script>  
+  	<link rel="stylesheet" href="/app/css/style.css" type="text/css" />
+  	 
+  	
+</head>
+
+<body class="body"  ng-controller="CompanyCtrl">
+
+	<header class="mainHeader">
+		<!--<img src="img/logo.gif"> -->
+		<nav><ul>
+			<li class="active"><a href="/index.html">Home</a></li>
+			<li><a href="/app/content/menu.html">Menu</a>
+			<ul>
+			<li><a href="/app/content/addmenu.html">Add Menu</a>
+			</ul>
+			</li>
+			<li><a href="#">Order</a></li>
+			<li><a href="#">Contact us</a></li>
+		</ul></nav>
+	</header>
+<div style="padding-bottom:50px">
+			<table style="width:100%">
+				<tr>
+					<td colspan="2" style="width:100%;padding:10px;">					
+					<div class="alert alert-info" role="alert">{{message}}</div>
+					</td>
+				</tr>
+				<tr>					
+					<td style="width:45%;padding-left:40px;vertical-align: top">
+						<div style="padding-bottom:20px">
+							<h3>Add a Menu</h3>
+						</div>
+						<form class="form-horizontal" role="form" ng-submit="addRowAsyncAsJSON()">
+							<div class="form-group">
+								<label class="col-md-2 control-label">ItemName</label>
+								<div class="col-md-4">
+									<input type="text" class="form-control" name="itemName"
+										ng-model="itemName" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label">ItemDate</label>
+								<div class="col-md-4">
+									<input type="text" class="form-control" name="itemDate"
+										ng-model="itemDate" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label">Remarks</label>
+								<div class="col-md-4">
+									<input type="text" class="form-control" name="remarks"
+										ng-model="remarks" />
+								</div>
+							</div>
+									<div class="form-group">
+								<label class="col-md-2 control-label">Price</label>
+								<div class="col-md-4">
+									<input type="text" class="form-control" name="price"
+										ng-model="price" />
+								</div>
+							</div>
+							<div class="form-group">								
+								<div style="padding-left:110px">
+									<input type="submit" value="Submit" class="btn btn-primary"/>
+								</div>
+							</div>
+						</form>
+					</td>
+					<td style="vertical-align: top">
+						<table class="table">
+							<tr>
+							
+								<th>ItemNo
+								</th>
+								<th>ItemName
+								</th>
+								<th>ItemDate
+								</th>
+								<th>Remarks
+								</th>
+								<th>Price
+								</th>
+							</tr>
+							<tr ng-repeat="Menu in Menu">
+								<td>{{Menu.itemNo}}
+								</td>
+								<td>{{Menu.itemName}}
+								</td>
+									<td>{{Menu.itemDate}}
+								</td>
+								<td>{{Menu.remarks}}
+								</td>
+									<td>{{Menu.price}}
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+	
+	<footer class="mainFooter">
+		<p>Copyright &copy; 2013 <a href="http://1stwebdesigner.com">1stwebdesigner</a></p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html ng-app="menuModule" >
+
+<head>
+    <script src = "/app/lib/1.2.1/angular.js"></script>
+    <script src="/app/controllers/MenuController.js"></script>
+  	<link rel="stylesheet" href="/app/css/style.css" type="text/css" />
+</head>
+
+<body class="body">
+
+	<header class="mainHeader">
+		<!--<img src="img/logo.gif"> -->
+		<nav><ul>
+			<li class="active"><a href="/index.html">Home</a></li>
+			<li><a href="/app/content/menu.html">Menu</a>
+			<ul>
+			<li><a href="/app/content/addmenu.html">Add Menu</a>
+			</ul>
+			</li>
+			<li><a href="#">Order</a></li>
+			<li><a href="#">Contact us</a></li>
+		</ul></nav>
+	</header>
+	
+<div>
+
+    <div ng-controller="allmenulist">
+ 
+    <!-- <p> Loaded All <a ng-click="loadmenu()">Menus</a> </p>  -->
+    
+    <p>Loaded all menus!!!!</p>
+   
+    
+        <table>
+                   
+            <thead>
+            <tr>
+                <th>ItemNumber</th>
+                <th>ItemName</th>
+                <th>ItemDate</th>
+                <th>remarks</th>
+                <th>price</th>
+            </tr>
+            </thead>
+       <!--   <tr>
+              <td>{{Menu.itemNo}}</td>
+              <td>{{Menu.itemName}}</td>
+              <td>{{Menu.itemDate}}</td>
+              <td>{{Menu.remarks}}</td>
+              <td>{{Menu.price}}</td>
+          </tr>  --> 
+            <tr ng-repeat="Menu in Menu">
+              <td>{{Menu.itemNo}}</td>
+              <td>{{Menu.itemName}}</td>
+              <td>{{Menu.itemDate}}</td>
+              <td>{{Menu.remarks}}</td>
+              <td>{{Menu.price}}</td>
+          </tr>
+          
+        </table>
+
+    </div>
+
+</div>
+	
+	<footer class="mainFooter">
+		<p>Copyright &copy; 2013 <a href="http://1stwebdesigner.com">1stwebdesigner</a></p>
+	</footer>
+</body>
+</html>
